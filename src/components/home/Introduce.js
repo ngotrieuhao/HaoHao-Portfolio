@@ -79,7 +79,7 @@ const Introduce = () => {
           <br />
           I'm <span className="home__title-color">Hao</span>
           <br />
-          I'm a Front-End
+          I'm a Front End
           <br />
           <span>Developer</span>
         </h1>
@@ -101,7 +101,7 @@ const Introduce = () => {
           Contact
         </Link>
         <a
-          href="./url/Ngo-Trieu-Hao.pdf"
+          href="./ngotrieuhaocv.pdf"
           download="Ngo-Trieu-Hao-Front-End"
           className="button--cv"
         >
