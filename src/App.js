@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { createContext, Fragment, useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Intro from "./components/Loading/Intro";
+import HomePage from "./page/HomePage";
+export const ThemeContext = createContext(null);
 
 function App() {
+  const [theme, setTheme] = useState("dark");
+  const [loading, setLoading] = useState(false);
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "dark" ? "light" : "dark"));
+  };
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 6000);
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      {loading ? (
+        <Intro loading={loading}></Intro>
+      ) : (
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+          <div className="App" id={theme}>
+            <Routes>
+              <Route path="/" exact element={<HomePage></HomePage>}></Route>
+            </Routes>
+          </div>
+          {theme === "light" ? <div className="overlay"></div> : ""}
+        </ThemeContext.Provider>
+      )}
+    </Fragment>
   );
 }
 

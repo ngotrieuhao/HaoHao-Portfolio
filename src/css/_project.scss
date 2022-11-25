@@ -1,0 +1,127 @@
+/* ---- PROJECTS ---- */
+.wrapp-project__demo--items {
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: 4rem;
+}
+.project__demo--item {
+    border-radius: 20px;
+    box-shadow: 0 0 20px 4px hsl(0deg 0% 51% / 50%);
+    width: 47%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.project__demo--item:nth-child(3),
+.project__demo--item:nth-child(4),
+.project__demo--item:nth-child(5),
+.project__demo--item:nth-child(6) {
+    margin-top: 3rem;
+}
+
+.project__demo--image {
+    padding-top: 20px;
+    height: 210px;
+}
+
+.demo--item-img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 94%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.project__demo--content--description {
+    margin-inline: 2rem;
+}
+.description--title {
+    margin: 1rem 0 10px 0;
+    color: $sectionColor;
+    font-size: 32px;
+    font-family: monospace;
+    font-weight: 700;
+}
+.wrapp--title {
+    font-size: 18px;
+    font-weight: 700;
+    color: $sectionColor;
+    font-family: monospace;
+}
+.project__demo--content--view {
+    margin: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+}
+.button-view {
+    cursor: pointer;
+    width: 10%;
+}
+.wrapp-technology {
+    margin-bottom: 10px;
+}
+.img-qrcode {
+    width: 5rem;
+    height: 4rem;
+    user-select: none;
+}
+
+.link-view {
+    user-select: none;
+    position: relative;
+    display: inline-block;
+    width: 277px;
+    height: 50px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.045em;
+    right: 10rem;
+    margin-top: 0.5rem;
+}
+
+.link-view svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.link-view rect {
+    stroke-width: 4;
+    stroke-dasharray: 353, 0;
+    stroke-dashoffset: 0;
+    -webkit-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
+
+.link-view span {
+    color: #fff;
+}
+
+.link-view:hover svg rect {
+    stroke-width: 4;
+    stroke-dasharray: 196, 543;
+    stroke-dashoffset: 437;
+}
+
+#light {
+    .project__demo--item {
+        background-color: #000000cf;
+    }
+    .project__demo--content--description {
+        color: $lightText;
+        .description--title {
+            color: $lightSection;
+        }
+        .wrapp--title {
+            color: $lightSection;
+        }
+    }
+}

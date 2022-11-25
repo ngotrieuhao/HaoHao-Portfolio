@@ -1,0 +1,47 @@
+/* ===== Thanks for watching =====*/
+.copy-right {
+    padding: 1.5rem;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+.copy-right:before {
+    background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+    content: "";
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    width: 90%;
+}
+
+.copy-right_title {
+    color: $sectionColor;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.copy-right > section {
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+}
+.copy-right > section svg {
+    color: #ff3838;
+    margin: 0 10px;
+    width: 13px;
+}
+
+#light {
+    .copy-right_title {
+        color: $lightSection;
+    }
+    .copy-right > section {
+        color: $lightText;
+        padding: 10px;
+    }
+}

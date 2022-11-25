@@ -1,0 +1,400 @@
+@media only screen and (min-width: 1470px) {
+    .knowledge__left--content_item {
+        height: 12vw;
+        width: 12vw;
+    }
+}
+/* ===== MEDIA QUERIES=====*/
+@media screen and (min-width: 768px) {
+    body {
+        margin: 0;
+    }
+
+    .section {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+        .section-title {
+            margin-bottom: 3rem;
+        }
+
+        .section-title::after {
+            width: 80px;
+            top: 3rem;
+        }
+    }
+    .home {
+        padding-top: 5rem;
+    }
+
+    .about__container {
+        align-items: center;
+        text-align: initial;
+        .about__img img {
+            width: 300px;
+        }
+    }
+
+    .skills__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        text-align: initial;
+    }
+
+    .work__container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .bd-grid {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .home__img {
+        right: 10%;
+    }
+    .input_message {
+        width: 44rem;
+    }
+}
+
+/* Mobile (Iphone) */
+@media only screen and (max-width: 46.1875rem) {
+    html {
+        overflow-x: hidden;
+    }
+    .body {
+        margin: 0 auto;
+    }
+
+    /*===== HOME =====*/
+    .home {
+        .home__data {
+            margin-top: 6rem;
+            margin-inline: 1rem;
+            .wrapp__icon-toggle {
+                width: 100%;
+                flex-direction: row;
+                left: 0;
+                top: 0;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                .favicon--cursor {
+                    position: relative;
+                    top: 1rem;
+                    left: 1rem;
+                    width: 20%;
+                }
+            }
+            .my__img {
+                margin-top: 20px;
+                width: 45%;
+                height: 200px;
+                width: 40%;
+                bottom: 1rem;
+                position: relative;
+            }
+        }
+        .home__title {
+            font-size: $h2Fontsize;
+        }
+        .home__button--contact {
+            margin-left: 1rem;
+        }
+        .button--contact {
+            padding: 0.75rem 1.5rem;
+        }
+        .button--cv {
+        }
+    }
+
+    /* About */
+    .about {
+        .about__img img {
+            width: auto;
+        }
+        .about__title {
+            .about__subtitle {
+                font-size: $h2Fontsize;
+            }
+            .about__text {
+                margin-inline: 2rem;
+                font-size: $normalSize;
+                word-spacing: -1.5px;
+            }
+        }
+    }
+
+    /* ===== SKILLS =====*/
+    .knowledge {
+        margin-top: 4rem;
+        margin-left: 1rem;
+        padding: 0 1.5rem;
+        .knowledge__left {
+            width: 100%;
+            .knowledge__left--content {
+                gap: 5%;
+                justify-content: flex-start;
+                margin-left: 0;
+            }
+            .knowledge__left--content_item {
+                height: 25vw;
+                margin-bottom: 1.5rem;
+                width: 30%;
+                font-size: 12px;
+            }
+        }
+        .knowledge__right {
+            position: absolute;
+            right: 2vw;
+            width: 40%;
+            animation: slideright2left 7s linear infinite;
+            .rotate {
+                animation: rotation 6s linear infinite;
+            }
+        }
+    }
+
+    /* ===== EXPERIENCE =====*/
+
+    .experience {
+        .wrapp-experience__left {
+            width: 0;
+            .wrapp-experience__left--image {
+                transform: translate(-18vw, 0vh);
+                width: 90vw;
+            }
+        }
+        .wrapp-experience__right {
+            border-radius: 10px;
+            width: 100%;
+            &--title {
+                font-size: 30px;
+            }
+        }
+    }
+
+    /* ===== PROJECTS =====*/
+    .project {
+        .project__demo--item {
+            width: 90%;
+            .link-view {
+                right: 0;
+                transform: scale(0.7);
+                & span {
+                    margin-left: 4rem;
+                    font-size: 18px;
+                }
+            }
+            .button-view {
+                width: 20%;
+            }
+        }
+
+        .wrapp-project__demo--items {
+            display: block;
+            padding-inline: 1rem;
+        }
+        .modal-container.js-modal-container {
+            width: 70%;
+        }
+        .modal.open {
+            margin-bottom: 8rem;
+        }
+        .description--title {
+            font-size: 22px;
+        }
+        .wrapp--title {
+            font-size: 16px;
+        }
+        .wrapp-technology {
+            font-size: 14px;
+        }
+        .wrapp-function {
+            font-size: 14px;
+        }
+    }
+
+    /* ===== CONTACT =====*/
+    .contact {
+        .wrapper-contact__container {
+            margin-top: 3rem;
+            padding: 0 2rem;
+            .contact__container--left {
+                margin-bottom: 3rem;
+                padding-bottom: 15px;
+                width: 100%;
+            }
+            .contact__container--right {
+                width: 100%;
+                .input_contact {
+                    font-size: 12px;
+                    width: 100%;
+                }
+                .form__label--name,
+                .form__label--email,
+                .form__label--message {
+                    font-size: 14px;
+                }
+                .input_message {
+                    font-size: 12px;
+                    width: 100%;
+                }
+                .form-group.invalid label.form__label--message {
+                    transform: translateY(-20px);
+                }
+                .form-group.invalid label {
+                    transform: translateY(0);
+                }
+                .form-group.invalid .form__label--name,
+                .form-group.invalid .form__label--email {
+                    transform: translateY(-20px) !important;
+                }
+            }
+        }
+        .contact__container.bd-grid {
+            width: 100%;
+            margin: 0;
+        }
+
+        .btn_send--contact {
+            width: 100%;
+            font-size: 14px;
+        }
+        .button {
+            font-size: 13px;
+            padding: 10px 20px;
+        }
+
+        .about__img img {
+            margin: 0 auto;
+            width: 12rem;
+        }
+        .about__text {
+            font-size: 15px;
+            margin: 0 1rem;
+        }
+        .contact__left--content_item article {
+            font-size: 16px;
+            padding-left: 0;
+        }
+    }
+    /* Thank */
+    .copy-right_title {
+        font-size: 26px;
+    }
+}
+
+/* Tablet (Ipad) */
+@media only screen and (min-width: 46.25rem) and (max-width: 63.9375rem) {
+    /* Section HOME */
+    .home {
+        .home__data {
+            margin-top: 2rem;
+            margin-inline: 1rem;
+            .wrapp__icon-toggle {
+                width: 90%;
+                flex-direction: row;
+                left: 0;
+                top: 0;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                .favicon--cursor {
+                    position: relative;
+                    top: 1rem;
+                    left: 1rem;
+                    width: 10%;
+                }
+            }
+            .my__img {
+                width: 40%;
+            }
+        }
+        .home__button--contact {
+            margin-left: 1rem;
+        }
+    }
+
+    /* Section About */
+    .about {
+        .about__title {
+            margin-right: 2rem;
+        }
+    }
+    /* Knowledge */
+    .knowledge {
+        flex-direction: column;
+        &__left--content {
+            margin-left: 0;
+            gap: 4rem;
+        }
+        &__right {
+            position: absolute;
+        }
+    }
+
+    /* Experience */
+    .experience {
+        padding: 0;
+        .wrapp-experience {
+            &__left {
+                position: absolute;
+                width: 100%;
+                &--image {
+                    left: 5rem;
+                    width: 70vw;
+                }
+            }
+            &__right {
+                width: 100%;
+            }
+        }
+    }
+
+    /* Project */
+    .project {
+        .wrapp-project__demo--items {
+            padding-inline: 1rem;
+            gap: 1rem;
+            .project__demo--item {
+                .project__demo--content--view {
+                    .button-view {
+                        width: 20%;
+                    }
+                    .link-view {
+                        right: 0;
+                        margin-top: 0;
+                        transform: scale(0.9);
+                        span {
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Contact */
+    .contact {
+        .wrapper-contact__container {
+            flex-direction: column;
+            gap: 2rem;
+            .contact__container--left {
+                width: 80%;
+                margin-inline: auto;
+            }
+            .contact__container--right {
+                width: 80%;
+                margin-inline: auto;
+            }
+            .input_contact {
+                width: 32rem;
+            }
+            .input_message {
+                width: 32rem;
+            }
+        }
+    }
+}

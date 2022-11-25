@@ -1,0 +1,25 @@
+/* ===== ABOUT =====*/
+.about__container {
+    text-align: center;
+}
+
+.about__subtitle {
+    margin-bottom: 0.5rem;
+    font-size: $h2Fontsize;
+    font-weight: 600;
+}
+
+.about__img {
+    justify-self: center;
+}
+
+.about__img img {
+    width: 200px;
+    border-radius: 0.5rem;
+    user-select: none;
+}
+.about__text {
+    line-height: 1.9;
+    font-size: 18px;
+    text-align: justify;
+}

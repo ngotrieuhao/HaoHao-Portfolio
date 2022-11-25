@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+// Reset CSS
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+input,
+button,
+textarea,
+select {
+    outline: none;
+}
+@import "./css/variables";
+@import "./css/intro";
+@import "./css/button";
+@import "./css/introduce";
+@import "./css/about";
+@import "./css/skills";
+@import "./css/experience";
+@import "./css/contact";
+@import "./css/project";
+@import "./css/thank";
+@import "./css/keyframe";
+@import "./css/media";
+
+@layer base {
+    body {
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+        color: $textColor;
+        overflow-x: hidden;
+    }
+}
+
+/*===== LAYOUT =====*/
+.bd-grid {
+    max-width: 1024px;
+    width: calc(100% - 2rem);
+}
+
+.section {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    .section-title {
+        text-transform: uppercase;
+        position: relative;
+        font-size: $bigFontsize;
+        color: $sectionColor;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        font-weight: 600;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 180px;
+            height: 0.18rem;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 4.5rem;
+            background-color: $sectionColor;
+        }
+    }
+}
+
+box-icon {
+    color: $sectionColor;
+}
+
+// Dark mode
+#dark {
+    background-image: $darkBackground;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// Light mode
+#light {
+    .home__title {
+        color: $lightText;
+        &-color {
+            color: $lightSection;
+        }
+    }
+    .section-title {
+        color: $lightSection;
+        &::after {
+            background-color: $lightSection;
+        }
+    }
+    .about__title {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        .about__subtitle {
+            color: $lightSection;
+        }
+    }
+
+    .about__text {
+        color: $lightText;
+        font-weight: 700;
+    }
+}
+.overlay {
+    content: "";
+    background-image: $lightBackground;
+    opacity: 0.4;
+    inset: 0;
+    position: fixed;
+    z-index: -1;
+}
+/* Mobile (Iphone) */
+@media only screen and (max-width: 46.1875rem) {
+    .bd-grid {
+        display: inline-block;
+        height: auto;
+        margin-top: 1rem;
+        max-width: 100%;
+        width: 100%;
+    }
+    .section .section-title {
+        font-size: 35px;
+        &::after {
+            top: 3rem;
+            width: 110px;
+        }
+    }
+}
