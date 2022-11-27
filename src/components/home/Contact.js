@@ -37,10 +37,10 @@ const Contact = () => {
         resolve(
           emailjs
             .sendForm(
-              "service_6yy46g6",
-              "template_z5qz4ie",
+              `${process.env.REACT_APP_EMAIL_SERVICE}`,
+              `${process.env.REACT_APP_EMAIL_TEMPLATE}`,
               form.current,
-              "RKo3UJemrIRJ-PYmM"
+              `${process.env.REACT_APP_EMAIL_KEY}`
             )
             .then(
               (result) => {
@@ -180,16 +180,8 @@ const Contact = () => {
                 control={control}
               ></Input>
               <Label htmlFor="name">Name</Label>
-              {/* <label className="form__label--name">Name</label> */}
             </div>
             <div className="form-group">
-              {/* <input
-                type="email"
-                id="fromName"
-                name="from_name"
-                className="input_contact"
-                placeholder=" "
-              /> */}
               <Input
                 name="from_name"
                 className="input_contact"
@@ -198,25 +190,8 @@ const Contact = () => {
                 control={control}
               ></Input>
               <Label htmlFor="email">Email</Label>
-              {/* <label className="form__label--email">Email</label> */}
-              {/* {error?.length > 0 ? (
-                <Fragment>
-                  <label className="form__label--email-error">Email</label>
-                  <p className="p-2 mt-2 text-red-500">{error}</p>
-                </Fragment>
-              ) : (
-                <label className="form__label--email">Email</label>
-              )} */}
             </div>
             <div className="form-group">
-              {/* <textarea
-                id="msg"
-                name="message"
-                placeholder=" "
-                className="input_message"
-                cols="0"
-                rows="10"
-              ></textarea> */}
               <Textarea
                 cols="0"
                 name="message"
@@ -228,7 +203,6 @@ const Contact = () => {
               <Label htmlFor="message" className="form__label--message">
                 Message
               </Label>
-              {/* <label className="form__label--message">Message</label> */}
 
               <div className="button-submit">
                 <Button
