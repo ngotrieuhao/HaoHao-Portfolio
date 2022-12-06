@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { memo, useEffect, useRef } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
@@ -221,4 +221,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default memo(Contact);
