@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
+import {useScroll, motion} from "framer-motion"
 
 const About = () => {
+  const ref = useRef(null);
+  const {scrollYProgress} =  useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1 "]
+  })
   return (
+    <motion.div 
+     ref={ref}
+      style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress
+      }}>
     <section className="about section" id="about">
       <h2 className="section-title">About</h2>
 
@@ -24,6 +36,7 @@ const About = () => {
         </div>
       </div>
     </section>
+    </motion.div>
   );
 };
 

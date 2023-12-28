@@ -12,6 +12,7 @@ function App() {
   };
   useEffect(() => {
     setLoading(true);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     setTimeout(() => {
       setLoading(false);
     }, 6000);

@@ -9,6 +9,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import Input from "../input/Input";
 import Label from "../label/Label";
 import Textarea from "../textarea/Textarea";
+import { useScroll, motion } from "framer-motion";
 
 const schema = yup.object({
   to_name: yup.string().required("Please enter your name"),
@@ -19,6 +20,11 @@ const schema = yup.object({
   message: yup.string().required("Please enter your message"),
 });
 const Contact = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "0.8 1 "],
+  });
   const form = useRef();
   const {
     reset,
@@ -72,10 +78,22 @@ const Contact = () => {
 
   return (
     <section className="contact section" id="contact">
-      <h2 className="section-title">Contact Me</h2>
+      <motion.h2
+        ref={ref}
+        style={{
+          scale: scrollYProgress,
+          opacity: scrollYProgress,
+        }}
+        className="section-title"
+      >
+        Contact Me
+      </motion.h2>
       <div className="wrapper-contact__container">
         {/* <!--===== CONTACT LEFT=====--> */}
-        <div className="contact__container--left">
+        <motion.div ref={ref}  style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress
+      }} className="contact__container--left">
           <div className="contact__left--title">Social Network</div>
           <div className="contact__left--content">
             <div className="contact__left--content_item">
@@ -150,7 +168,7 @@ const Contact = () => {
               <article>
                 <p>Hảo Ngô</p>
                 <a
-                  href="https://www.linkedin.com/in/h%E1%BA%A3o-ng%C3%B4-795998184/"
+                  href="https://www.linkedin.com/in/hao-ngo-795998184/"
                   className="contact__left--linkmess"
                   target="_blank"
                   rel="noreferrer"
@@ -160,10 +178,13 @@ const Contact = () => {
               </article>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* <!--===== CONTACT RIGHT=====--> */}
-        <div className="contact__container--right">
+        <motion.div ref={ref}  style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress
+      }} className="contact__container--right">
           <div className="contact__right--title">Let's talk</div>
           <form
             className="contact__form"
@@ -215,7 +236,7 @@ const Contact = () => {
               </div>
             </div>
           </form>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

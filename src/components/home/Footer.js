@@ -1,12 +1,13 @@
 import React from "react";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <section>
       <div className="copy-right">
         <div className="copy-right_title">Thanks for watching</div>
         <section>
-          © 2022
+          © {currentYear}
           <span>
             <svg
               className="svg-inline--fa fa-heart fa-w-16"
