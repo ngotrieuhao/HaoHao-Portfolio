@@ -11,24 +11,28 @@ const Introduce = () => {
       scale: 1,
       transition: {
         delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
-  
+
   const item = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
-      opacity: 1
-    }
+      opacity: 1,
+    },
   };
-  
+
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <motion.section variants={container}
-    initial="hidden"
-    animate="visible" className="home bd-grid" id="home">
+    <motion.section
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      className="home bd-grid"
+      id="home"
+    >
       <div className="home__data">
         <div className="absolute flex flex-col wrapp__icon-toggle left-16">
           <motion.div variants={item} className="w-36 favicon--cursor">
@@ -36,7 +40,10 @@ const Introduce = () => {
               <img src="./faviconhome.png" alt="favicon" />
             </a>
           </motion.div>
-          <motion.div variants={item} className="flex items-center justify-center gap-2 mt-8 ml-2">
+          <motion.div
+            variants={item}
+            className="flex items-center justify-center gap-2 mt-8 ml-2"
+          >
             {theme === "light" ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +106,10 @@ const Introduce = () => {
         <motion.h1 variants={item} className="home__title">
           Hi,
           <br />
-          I'm <motion.span variants={item} className="home__title-color">Hao</motion.span>
+          I'm{" "}
+          <motion.span variants={item} className="home__title-color">
+            Hao
+          </motion.span>
           <br />
           I'm a Front End
           <br />
@@ -130,6 +140,68 @@ const Introduce = () => {
           Download CV
         </a>
       </motion.div>
+      <div className="nav-lists">
+      <Link
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={-20}
+          duration={1200}
+          className="nav-lists__link"
+        >
+          Introduce
+        </Link>
+      <Link
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={-20}
+          duration={1200}
+          className="nav-lists__link"
+        >
+          About
+        </Link>
+        <Link
+          to="skills"
+          spy={true}
+          smooth={true}
+          offset={-20}
+          duration={1200}
+          className="nav-lists__link"
+        >
+          Skills
+        </Link>
+        <Link
+          to="experience"
+          spy={true}
+          smooth={true}
+          offset={-20}
+          duration={1200}
+          className="nav-lists__link"
+        >
+          Experience
+        </Link>
+        <Link
+          to="project"
+          spy={true}
+          smooth={true}
+          offset={-20}
+          duration={1200}
+          className="nav-lists__link"
+        >
+          Project
+        </Link>
+        <Link
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-20}
+          duration={1200}
+          className="nav-lists__link"
+        >
+          Contact
+        </Link>
+      </div>
     </motion.section>
   );
 };
