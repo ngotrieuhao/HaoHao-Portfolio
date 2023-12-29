@@ -140,7 +140,7 @@ const Introduce = () => {
           Download CV
         </a>
       </motion.div>
-      <div className="nav-lists">
+      <motion.div variants={item} className="nav-lists">
       <Link
           to="home"
           spy={true}
@@ -201,7 +201,7 @@ const Introduce = () => {
         >
           Contact
         </Link>
-      </div>
+      </motion.div>
     </motion.section>
   );
 };
