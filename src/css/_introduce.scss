@@ -137,6 +137,18 @@
         border-right: 1px solid #fff;
     }
 }
+
+// Progress Bar
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: $sectionColor;
+    transform-origin: 0%;
+    z-index: 10000;
+  }
 @media screen and (min-width: 1024px) {
     .bd-grid {
         margin-left: auto;
@@ -151,6 +163,9 @@
 }
 
 #light {
+    .progress-bar {
+        background: $lightSection;
+      }
     .button--contact {
         background-color: $lightText;
         color: #fff;

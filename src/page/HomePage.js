@@ -8,9 +8,16 @@ import Project from "../components/home/Project";
 import Skills from "../components/home/Skills";
 import ScrollToTop from "react-scroll-to-top";
 
+import { motion, useScroll } from "framer-motion";
+
 const HomePage = () => {
+  const { scrollYProgress } = useScroll();
   return (
     <Fragment>
+      <motion.div
+        className="progress-bar"
+        style={{ scaleX: scrollYProgress }}
+      />
       <Introduce></Introduce>
       <About></About>
       <Skills></Skills>
