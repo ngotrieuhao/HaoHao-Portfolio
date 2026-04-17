@@ -12,6 +12,7 @@ import { motion, useScroll } from "framer-motion";
 
 const HomePage = () => {
   const { scrollYProgress } = useScroll();
+  
   return (
     <Fragment>
       <motion.div
